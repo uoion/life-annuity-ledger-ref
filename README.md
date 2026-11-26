@@ -1,3 +1,5 @@
+Context: Built as a hands-on agentic engineering exploration using spec-driven AI coding workflows to study and verify cloud-native ledger, transactional outbox, containerization, and DevSecOps CI patterns on 100% synthetic ZAR data.
+
 # Life Annuity Ledger Reference Architecture
 
 [![CI — Quality, Security, Container & IaC](https://github.com/uoion/life-annuity-ledger-ref/actions/workflows/ci.yml/badge.svg)](https://github.com/uoion/life-annuity-ledger-ref/actions/workflows/ci.yml)
