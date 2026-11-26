@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "life-annuity-ledger-ref"
+version = "0.1.0"
+description = "Cloud-native ZAR Guaranteed Life Annuities reference backend: deterministic pricing core, append-only cryptographic audit ledger, transactional outbox, and POPIA-governed AI explanations."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0,<1.0.0",
+    "httpx>=0.27.0,<1.0.0",
+    "pydantic>=2.9.0,<3.0.0",
+    "pydantic-settings>=2.6.0,<3.0.0",
+    "sqlalchemy>=2.0.35,<3.0.0",
+    "uvicorn[standard]>=0.32.0,<1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "bandit>=1.7.10,<2.0.0",
+    "pyyaml>=6.0.0,<7.0.0",
+    "pytest>=8.3.0,<9.0.0",
+    "pytest-cov>=5.0.0,<7.0.0",
+    "ruff>=0.7.0,<1.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
